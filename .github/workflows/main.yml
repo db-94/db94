@@ -8,10 +8,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - name: deploy-via-scp
       uses: horochx/deploy-via-scp@master
       with:
-        local: "dist/*"
+        local: src/*
         remote: db94/
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USER }}
