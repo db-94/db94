@@ -11,7 +11,7 @@ jobs:
     - name: deploy-via-scp
       uses: horochx/deploy-via-scp@master
       with:
-        local: ./*
+        local: dist/
         remote: db94/
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USER }}
